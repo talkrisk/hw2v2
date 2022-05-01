@@ -129,6 +129,54 @@ new_role["actor_id"] = "Michael Caine"
 new_role["character_name"] = "Alfred"
 new_role.save
 
+new_role = Role.new
+new_role["movie_id"] = "Batman Begins"
+new_role["actor_id"] = "Liam Neeson"
+new_role["character_name"] = "Ra's Al Ghul"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = "Batman Begins"
+new_role["actor_id"] = "Katie Holmes"
+new_role["character_name"] = "Rachel Dawes"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = "Batman Begins"
+new_role["actor_id"] = "Gary Oldman"
+new_role["character_name"] = "Commissioner Gordon"
+new_role.save
+
+
+new_role = Role.new
+new_role["movie_id"] = "The Dark Knight"
+new_role["actor_id"] = "Christian Bale"
+new_role["character_name"] = "Bruce Wayne"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = "The Dark Knight"
+new_role["actor_id"] = "Heath Ledger"
+new_role["character_name"] = "Joker"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = "The Dark Knight"
+new_role["actor_id"] = "Aaron Eckhart"
+new_role["character_name"] = "Harvey Dent"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = "The Dark Knight"
+new_role["actor_id"] = "Michael Caine"
+new_role["character_name"] = "Alfred"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = "The Dark Knight"
+new_role["actor_id"] = "Maggie Gyllenhaal"
+new_role["character_name"] = "Rachel Dawes"
+new_role.save
 # Insert data into the database that reflects the sample data shown above.
 # Do not use hard-coded foreign key IDs.
 # TODO!
