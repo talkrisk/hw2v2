@@ -233,12 +233,16 @@ new_role.save
 # TODO!
 
 # Prints a header for the movies output
+ 
 puts "Movies"
 puts "======"
-puts ""
+puts Movie.all
+
 
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
+
+
 
 # Prints a header for the cast output
 puts ""
