@@ -70,10 +70,12 @@
 # Delete existing data, so you'll start fresh each time this script is run.
 # Use `Model.destroy_all` code.
 # TODO!
+
 Actor.destroy_all
 Movie.destroy_all
 Role.destroy_all
 Studio.destroy_all
+
 # Generate models and tables, according to the domain model.
 # TODO!
 new_studio = Studio.new 
@@ -115,6 +117,24 @@ new_actor["name"] = "Katie Holmes"
 new_actor.save
 new_actor = Actor.new
 new_actor["name"] = "Gary Oldman"
+new_actor.save
+new_actor = Actor.new
+new_actor["name"] = "Heath Ledger"
+new_actor.save
+new_actor = Actor.new
+new_actor["name"] = "Aaron Eckhart"
+new_actor.save
+new_actor = Actor.new
+new_actor["name"] = "Maggie Gyllenhaal"
+new_actor.save
+new_actor = Actor.new
+new_actor["name"] = "Tom Hardy"
+new_actor.save
+new_actor = Actor.new
+new_actor["name"] = "Joseph Gordon-Levitt"
+new_actor.save
+new_actor = Actor.new
+new_actor["name"] = "Anne Hathaway"
 new_actor.save
 
 new_role = Role.new
@@ -177,6 +197,37 @@ new_role["movie_id"] = "The Dark Knight"
 new_role["actor_id"] = "Maggie Gyllenhaal"
 new_role["character_name"] = "Rachel Dawes"
 new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = "The Dark Knight Rises"
+new_role["actor_id"] = "Christian Bale"
+new_role["character_name"] = "Bruce Wayne"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = "The Dark Knight Rises"
+new_role["actor_id"] = "Gary Oldman"
+new_role["character_name"] = "Commissioner Gordon"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = "The Dark Knight Rises"
+new_role["actor_id"] = "Tom Hardy"
+new_role["character_name"] = "Bane"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = "The Dark Knight Rises"
+new_role["actor_id"] = "Joseph Gordon-Levitt"
+new_role["character_name"] = "John Blake"
+new_role.save
+
+new_role = Role.new
+new_role["movie_id"] = "The Dark Knight Rises"
+new_role["actor_id"] = "Anne Hathaway"
+new_role["character_name"] = "Selina Kyle"
+new_role.save
+
 # Insert data into the database that reflects the sample data shown above.
 # Do not use hard-coded foreign key IDs.
 # TODO!
