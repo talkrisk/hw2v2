@@ -256,7 +256,10 @@ for movie in Movie.all
     title = movie["title"] 
     year = movie["year_released"]
     rated = movie["rated"]
-    puts "#{title}     #{year}     #{rated}"
+    studio_id = movie["studio_id"]
+    studio = Studio.find_by({"id" => movie["studio_id"]})
+    #apple = Company.find_by({ "name" => "Apple" })
+    puts "#{title}     #{year}     #{rated}    #{studio["name"]}"
 end
 
 #for contact in apple_contacts
@@ -280,8 +283,8 @@ puts "========"
 for role in Role.all
     movie_id = role["movie_id"] 
     actor_id = role["actor_id"]
-    charachter_name = role["charachter_name"]
-    puts "#{movie_id}     #{actor_id}     #{charachter_name}"
+    character_name = role["character_name"]
+    puts "#{movie_id}     #{actor_id}     #{character_name}"
 end
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
