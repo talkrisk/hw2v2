@@ -288,11 +288,33 @@ for role in Role.all
 end
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
-
+puts ""
+puts "Batman Begins Cast"
+puts "====="
 for cast in Role.all
-    movie_id = cast["Batman Begins"] 
+    batman_begins = Movie.find_by({"title" => "Batman Begins"})
     actor_id = cast["actor_id"]
     character_name = cast["character_name"]
-    puts "#{movie_id"}     #{actor_id}     #{character_name}"
+    puts   "cast in Batman Begins: #{actor_id} playing #{character_name}"
 end
-  
+
+puts ""
+puts "The Dark Knight"
+puts "====="
+for cast in Role.all
+    the_dark_knight = Movie.where({"title" => "The Dark Knight"})
+    actor_id = cast["actor_id"]
+    character_name = cast["character_name"]
+    puts   "cast in The Dark Knight: #{actor_id} playing #{character_name}"
+end
+
+
+puts ""
+puts "The Dark Knight Rises"
+puts "====="
+for cast in Role.all
+    the_dark_knight_rises = Movie.where({"title" => "The Dark Knight Rises"})
+    actor_id = cast["actor_id"]
+    character_name = cast["character_name"]
+    puts   "cast in The Dark Knight Rises: #{actor_id} playing #{character_name}"
+end
