@@ -86,26 +86,27 @@ Studio.destroy_all
 new_studio = Studio.new 
 new_studio["name"] = "Warner Bros."
 new_studio.save
+puts new_studio["id"]
 
 new_movie = Movie.new
 new_movie["title"] = "Batman Begins"
 new_movie["year_released"] = "2005"
 new_movie["rated"] = "PG-13"
-new_movie["studio_id"] = "Warner Bros."
+new_movie["studio_id"] = new_studio["id"]
 new_movie.save
 
 new_movie = Movie.new
 new_movie["title"] = "The Dark Knight"
 new_movie["year_released"] = "2008"
 new_movie["rated"] = "PG-13"
-new_movie["studio_id"] = "Warner Bros."
+new_movie["studio_id"] = new_studio["id"]
 new_movie.save
 
 new_movie = Movie.new
 new_movie["title"] = "The Dark Knight Rises"
 new_movie["year_released"] = "2012"
 new_movie["rated"] = "PG-13"
-new_movie["studio_id"] = "Warner Bros."
+new_movie["studio_id"] = new_studio["id"]
 new_movie.save
 
 new_actor = Actor.new
@@ -245,10 +246,26 @@ new_role.save
 
 # Prints a header for the movies output
  
+
+
 puts "Movies"
 puts "======"
-puts Movie.all
+#puts new_movie["title"]
 
+for movie in Movie.all
+    title = movie["title"] 
+    year = movie["year_released"]
+    rated = movie["rated"]
+    puts "#{title}     #{year}     #{rated}"
+end
+
+#for contact in apple_contacts
+#    # read each contact row's first_name and last_name columns
+#    first_name = contact["first_name"]
+ #   last_name = contact["last_name"]
+    # display the first_name and last_name
+  #  puts "#{first_name} #{last_name}"
+  #end
 
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
@@ -259,8 +276,13 @@ puts Movie.all
 puts ""
 puts "Top Cast"
 puts "========"
-puts Role.all
-
+ 
+for role in Role.all
+    movie_id = role["movie_id"] 
+    actor_id = role["actor_id"]
+    charachter_name = role["charachter_name"]
+    puts "#{movie_id}     #{actor_id}     #{charachter_name}"
+end
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
 
