@@ -86,7 +86,7 @@ Studio.destroy_all
 new_studio = Studio.new 
 new_studio["name"] = "Warner Bros."
 new_studio.save
-puts new_studio["id"]
+#puts new_studio["id"]
 
 new_movie = Movie.new
 new_movie["title"] = "Batman Begins"
@@ -289,5 +289,10 @@ end
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
 
-
+for cast in Role.all
+    movie_id = cast["Batman Begins"] 
+    actor_id = cast["actor_id"]
+    character_name = cast["character_name"]
+    puts "#{movie_id"}     #{actor_id}     #{character_name}"
+end
   
